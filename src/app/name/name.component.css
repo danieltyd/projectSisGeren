@@ -1,0 +1,12 @@
+.full-width-table {
+  width: 100%;
+}
+.text-success{
+    background: #5cb85c;
+}
+.text-secondary{
+    background: #f0ad4e;
+}
+.text-danger{
+    background: #d9534f;
+}
