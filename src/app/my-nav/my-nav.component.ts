@@ -17,4 +17,10 @@ export class MyNavComponent {
 
   constructor(private breakpointObserver: BreakpointObserver) {}
 
+  mobileQuery: MediaQueryList;
+
+  fillerNav =[
+  {name: 'Gerente General', route: 'name'},
+  {name: 'Director de TI', route: 'name2'},
+  ];
 }

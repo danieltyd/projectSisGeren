@@ -7,16 +7,18 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialDashboardComponent } from './material-dashboard/material-dashboard.component';
 import { MatGridListModule, MatCardModule, MatMenuModule, MatIconModule, MatButtonModule, MatToolbarModule, MatSidenavModule, MatListModule, MatTableModule, MatPaginatorModule, MatSortModule, MatInputModule } from '@angular/material';
 import { LayoutModule } from '@angular/cdk/layout';
+import { FormsModule } from '@angular/forms';
 import { MyNavComponent } from './my-nav/my-nav.component';
 import { NameComponent } from './name/name.component';
-import { FormsModule } from '@angular/forms';
+import { Name2Component } from './name2/name2.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MaterialDashboardComponent,
     MyNavComponent,
-    NameComponent
+    NameComponent,
+    Name2Component
   ],
   imports: [
     BrowserModule,
@@ -34,7 +36,6 @@ import { FormsModule } from '@angular/forms';
     MatTableModule,
     MatPaginatorModule,
     MatSortModule,
-    
     FormsModule,
     MatInputModule,
     MatButtonModule
