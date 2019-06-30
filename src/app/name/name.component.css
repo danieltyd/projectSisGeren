@@ -10,3 +10,15 @@
 .text-danger{
     background: #d9534f;
 }
+.boton{
+    color: white;
+    background: #337ab7;
+    margin-left: 1em;
+}
+.example-full-width{
+    width: 9em;
+}
+.titulo{
+    font-weight: bold;
+    font-size: 14px;
+}

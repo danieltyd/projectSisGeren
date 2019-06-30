@@ -6,7 +6,7 @@
 
         <!-- indicador Column -->
         <ng-container matColumnDef="indicador">
-            <th mat-header-cell *matHeaderCellDef> Indicador </th>
+            <th mat-header-cell *matHeaderCellDef class="titulo"> Indicador </th>
             <td mat-cell *matCellDef="let element" [ngClass]="{
                 'text-success':element.estado === 'positive',
                 'text-secondary':element.estado === 'mean',
@@ -16,7 +16,7 @@
 
         <!-- tipo Column -->
         <ng-container matColumnDef="tipoIndicador">
-            <th mat-header-cell *matHeaderCellDef> Tipo de Indicador </th>
+            <th mat-header-cell *matHeaderCellDef class="titulo"> Tipo de Indicador </th>
             <td mat-cell *matCellDef="let element" [ngClass]="{
                 'text-success':element.estado === 'positive',
                 'text-secondary':element.estado === 'mean',
@@ -26,7 +26,7 @@
 
         <!-- frecuencia Column -->
         <ng-container matColumnDef="frecuencia">
-            <th mat-header-cell *matHeaderCellDef> Frecuencia </th>
+            <th mat-header-cell *matHeaderCellDef class="titulo"> Frecuencia </th>
             <td mat-cell *matCellDef="let element" [ngClass]="{
                 'text-success':element.estado === 'positive',
                 'text-secondary':element.estado === 'mean',
@@ -36,7 +36,7 @@
 
         <!-- fuente Column -->
         <ng-container matColumnDef="fuente">
-            <th mat-header-cell *matHeaderCellDef> Fuente </th>
+            <th mat-header-cell *matHeaderCellDef class="titulo"> Fuente </th>
             <td mat-cell *matCellDef="let element" [ngClass]="{
                 'text-success':element.estado === 'positive',
                 'text-secondary':element.estado === 'mean',
@@ -46,7 +46,7 @@
 
         <!-- valor Column -->
         <ng-container matColumnDef="valor">
-            <th mat-header-cell *matHeaderCellDef> Valor </th>
+            <th mat-header-cell *matHeaderCellDef class="titulo"> Valor esperado</th>
             <td mat-cell *matCellDef="let element" [ngClass]="{
                 'text-success':element.estado === 'positive',
                 'text-secondary':element.estado === 'mean',
@@ -56,7 +56,7 @@
 
         <!-- estado Column -->
         <ng-container matColumnDef="estado">
-            <th mat-header-cell *matHeaderCellDef> Estado </th>
+            <th mat-header-cell *matHeaderCellDef class="titulo"> Estado </th>
             <td mat-cell *matCellDef="let element" [ngClass]="{
                 'text-success':element.estado === 'positive',
                 'text-secondary':element.estado === 'mean',
@@ -66,7 +66,7 @@
 
         <!-- responsable Column -->
         <ng-container matColumnDef="responsable">
-            <th mat-header-cell *matHeaderCellDef> Responsable </th>
+            <th mat-header-cell *matHeaderCellDef class="titulo"> Responsable </th>
             <td mat-cell *matCellDef="let element" [ngClass]="{
                 'text-success':element.estado === 'positive',
                 'text-secondary':element.estado === 'mean',
@@ -76,7 +76,7 @@
 
         <!-- accion Column -->
         <ng-container matColumnDef="accion">
-            <th mat-header-cell *matHeaderCellDef> Accion </th>
+            <th mat-header-cell *matHeaderCellDef class="titulo"> Accion </th>
             <td mat-cell *matCellDef="let element" [ngClass]="{
                 'text-success':element.estado === 'positive',
                 'text-secondary':element.estado === 'mean',
@@ -86,13 +86,13 @@
                     <input matInput placeholder="Introduzca un valor" [(ngModel)]="element.accion" (keydown.enter)="calcular(element.id,element.accion)">
                 </mat-form-field>
 
-                <button mat-raised-button (click)="calcular(element.id,element.accion)">Aceptar</button>
+                <button mat-raised-button class="boton" (click)="calcular(element.id,element.accion)">Aceptar</button>
             </td>
         </ng-container>
 
 
 
-        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-header-row *matHeaderRowDef="displayedColumns" ></tr>
         <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
     </table>
 

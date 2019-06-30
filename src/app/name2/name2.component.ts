@@ -19,10 +19,10 @@ export interface PeriodicElement {
 }
 
 const ELEMENT_DATA: PeriodicElement[] = [    
-  {id:1,indicador: 'Retención de clientes', tipoIndicador: 'Estrategico', frecuencia: 'Semestral', fuente: 'Informe administrativo', valor:8,estado:'positive',responsable:'Encargado A',accion: null,min:10,max:20},
-  {id:2,indicador: 'Retención de clientes', tipoIndicador: 'Estrategico', frecuencia: 'Semestral', fuente: 'Informe administrativo', valor:8,estado:'positive',responsable:'Encargado A',accion: null,min:5,max:10},
-  {id:3,indicador: 'Retención de clientes', tipoIndicador: 'Estrategico', frecuencia: 'Semestral', fuente: 'Informe administrativo', valor:8,estado:'positive',responsable:'Encargado A',accion: null,min:15,max:20},
-  {id:4,indicador: 'Retención de clientes', tipoIndicador: 'Estrategico', frecuencia: 'Semestral', fuente: 'Informe administrativo', valor:8,estado:'positive',responsable:'Encargado A',accion: null,min:10,max:14},
+  {id:1,indicador: 'Margen comercial', tipoIndicador: 'Estrategico', frecuencia: 'Semestral', fuente: 'Reporte comercial', valor:null,estado:null,responsable:'Encargado B',accion: null,min:9,max:16},
+  {id:2,indicador: 'Gastos fijos', tipoIndicador: 'No estrategico', frecuencia: 'Semestral', fuente: 'Reporte administrativo', valor:null,estado:null,responsable:'Encargado E',accion: null,min:5,max:11},
+  {id:3,indicador: 'Cash flow', tipoIndicador: 'No estrategico', frecuencia: 'Semestral', fuente: 'Reporte administrativo', valor:null,estado:null,responsable:'Encargado F',accion: null,min:7,max:15},
+  
 ];
 @Component({
   selector: 'app-name2',
