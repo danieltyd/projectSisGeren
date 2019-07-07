@@ -44,7 +44,7 @@ import { VentanaComponent } from './ventana/ventana.component';
     MatButtonModule,
     MatDialogModule
   ],
-  entryComponents: [Name2Component, DialogOverviewExampleDialog],
+  entryComponents: [ DialogOverviewExampleDialog],
   providers: [],
   bootstrap: [AppComponent]
 })
