@@ -83,16 +83,22 @@
                 'text-danger':element.estado === 'negative'
             }">
                 <mat-form-field class="example-full-width">
-                    <input matInput [readonly]="true" [(ngModel)]="element.accion" (keydown.enter)="calcular(element.id,element.accion)">
+                    <input matInput [readonly]="true" [(ngModel)]="element.accion"
+                        (keydown.enter)="calcular(element.id,element.accion)">
                 </mat-form-field>
 
-                <button mat-raised-button class="boton" (click)="openDialog(element.id)">Aceptar</button>
+                <button mat-raised-button class="boton" (click)="openDialog(element.id)">
+                    <i class="material-icons editar">
+                        edit
+                    </i>
+                    
+                </button>
             </td>
         </ng-container>
 
 
 
-        <tr mat-header-row *matHeaderRowDef="displayedColumns" ></tr>
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
         <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
     </table>
 

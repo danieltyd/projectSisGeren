@@ -62,8 +62,7 @@ export class NameComponent implements OnInit, DoCheck {
 
     constructor(public dialog: MatDialog) { }
     ngOnInit(): void {
-        for(let i of ELEMENT_DATA){
-            console.log(i.id);
+        for(let i of ELEMENT_DATA){            
             let id=i.id;
             switch (id) {
                 case 1: {
@@ -203,8 +202,7 @@ export class NameComponent implements OnInit, DoCheck {
         });
     
         dialogRef.afterClosed().subscribe(result => {
-          console.log('The dialog was closed');
-          console.log(result);
+          
           this.utilidad=result.utilidad;
           this.dataSource[id - 1].accion = result.valor;
           this.dataSource[id - 1].valor=result.valor;

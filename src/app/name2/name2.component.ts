@@ -49,7 +49,7 @@ export class DialogOverviewExampleDialog {
         public dialogRef: MatDialogRef<DialogOverviewExampleDialog>,
         @Inject(MAT_DIALOG_DATA) public data: DialogData) {
             
-        console.log(data);
+        
     }
 
         onNoClick(): void {
@@ -57,7 +57,7 @@ export class DialogOverviewExampleDialog {
         }
         calculaNum(numero1,numero2){
             /* return this.data.valor=numero1/numero2; */
-            console.log(this.data);
+            
             switch(this.data.id){
                 case 1:{
                     this.data.utilidad=numero1-numero2;
