@@ -20,7 +20,7 @@ export class MyNavComponent {
   mobileQuery: MediaQueryList;
 
   fillerNav =[
-  {name: 'Gerente General', route: 'name'},
-  {name: 'Director de TI', route: 'name2'},
+  {name: 'Gerente', route: 'name'},
+  
   ];
 }

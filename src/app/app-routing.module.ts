@@ -5,7 +5,7 @@ import { NameComponent } from './name/name.component';
 import { Name2Component } from './name2/name2.component';
 
 const routes: Routes = [
-{path: ' ' , component:MyNavComponent },
+{path: 'name' , component:MyNavComponent },
  {path: 'name' , component:NameComponent},
   {path: 'name2' , component:Name2Component},
 ];

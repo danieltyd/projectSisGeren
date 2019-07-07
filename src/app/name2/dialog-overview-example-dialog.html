@@ -1,0 +1,119 @@
+<h1 mat-dialog-title>Ingreso de datos</h1>
+<div mat-dialog-content>
+    <!-- Para indicador 1 -->
+    <mat-form-field *ngIf="data.id === 1">
+        <p>Total de ingresos:</p>
+        <input matInput [(ngModel)]="data.numero1">
+    </mat-form-field>
+
+    <mat-form-field *ngIf="data.id === 1">
+        <p>Total egresos:</p>
+        <input matInput [(ngModel)]="data.numero2">
+    </mat-form-field>
+
+
+    <!-- Indicador 2 -->
+    <mat-form-field *ngIf="data.id === 2">
+        <p># Nuevos clientes:</p>
+        <input matInput [(ngModel)]="data.numero1">
+    </mat-form-field>
+
+    <mat-form-field *ngIf="data.id === 2">
+        <p>Gastos de marqueting:</p>
+        <input matInput [(ngModel)]="data.numero2">
+    </mat-form-field>
+
+
+    <!-- Indicador 3 -->
+    <mat-form-field *ngIf="data.id === 3">
+        <p># Clientes demandantes de servicio:</p>
+        <input matInput [(ngModel)]="data.numero1">
+    </mat-form-field>
+
+    <mat-form-field *ngIf="data.id === 3">
+        <p>Media del precio del mercado:</p>
+        <input matInput [(ngModel)]="data.numero2">
+    </mat-form-field>
+
+
+    <!-- Indicador 4 -->
+    <mat-form-field *ngIf="data.id === 4">
+        <p>Utilidad:</p>
+        <input matInput [readonly]="true" [(ngModel)]="data.utilidad">
+    </mat-form-field>
+
+    <mat-form-field *ngIf="data.id === 4">
+        <p># Nuevos planes contratados:</p>
+        <input matInput [(ngModel)]="data.numero2">
+    </mat-form-field>
+
+
+    <!-- Indicador 5 -->
+    <mat-form-field *ngIf="data.id === 5">
+        <p>Tiempo de respuesta anterior:</p>
+        <input matInput [(ngModel)]="data.numero1">
+    </mat-form-field>
+
+    <mat-form-field *ngIf="data.id === 5">
+        <p>Tiempo de respuesta optimizado:</p>
+        <input matInput [(ngModel)]="data.numero2">
+    </mat-form-field>
+
+
+    <!-- Indicador 6 -->
+    <mat-form-field *ngIf="data.id === 6">
+        <p>Campañas comerciales ejecutadas con exito</p>
+        <input matInput [(ngModel)]="data.numero1">
+    </mat-form-field>
+
+
+
+    <!-- Indicador 7 -->
+    <mat-form-field *ngIf="data.id === 7">
+        <p># Personal con desempeño adecuado:</p>
+        <input matInput [(ngModel)]="data.numero1">
+    </mat-form-field>
+
+    <mat-form-field *ngIf="data.id === 7">
+        <p>Personal total:</p>
+        <input matInput [(ngModel)]="data.numero2">
+    </mat-form-field>
+
+
+    <!-- Indicador 8 -->
+    <mat-form-field *ngIf="data.id === 8">
+        <p># Minutos de no disponibilidad:</p>
+        <input matInput [(ngModel)]="data.numero1">
+    </mat-form-field>
+
+
+
+    <!-- Indicador 9 -->
+    <mat-form-field *ngIf="data.id === 9">
+        <p>Total de personal tecnico:</p>
+        <input matInput [(ngModel)]="data.numero1">
+    </mat-form-field>
+
+    <mat-form-field *ngIf="data.id === 9">
+        <p># Tecnicos desactualizados:</p>
+        <input matInput [(ngModel)]="data.numero2">
+    </mat-form-field>
+
+
+    <!-- Indicador 10 -->
+    <mat-form-field *ngIf="data.id === 10">
+        <p>Utilidad:</p>
+        <input matInput [readonly]="true" [(ngModel)]="data.numero1">
+    </mat-form-field>
+
+    <mat-form-field *ngIf="data.id === 10">
+        <p>Costo de infraestructura:</p>
+        <input matInput [(ngModel)]="data.numero2">
+    </mat-form-field>
+
+
+</div>
+<div mat-dialog-actions>
+    <button mat-button (click)="onNoClick()">Cancelar</button>
+    <button mat-button [mat-dialog-close]="calculaNum(data.numero1,data.numero2)" cdkFocusInitial>Ok</button>
+</div>

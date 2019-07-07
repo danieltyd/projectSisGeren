@@ -1,54 +1,116 @@
-import { Component, OnInit } from '@angular/core';
-export interface PeriodicElement {
-  /* name: string;
-  position: number;
-  weight: number;
-  symbol: string; */
-  id:number;
-  indicador: string;
-  tipoIndicador:string;
-  frecuencia:string;
-  fuente:string;
-  valor:number;
-  responsable:string;
-  estado:string;
-  accion:number;
-  min:number;
-  max:number;
-  
+import { Component, OnInit, Inject } from '@angular/core';
+import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
+export interface DialogData {
+    id: number;
+    numero1:number;
+    numero2:number;
+    valor:number;
+    periodo:number;
+    utilidad:number;
 }
-
-const ELEMENT_DATA: PeriodicElement[] = [    
-  {id:1,indicador: 'Margen comercial', tipoIndicador: 'Estrategico', frecuencia: 'Semestral', fuente: 'Reporte comercial', valor:null,estado:null,responsable:'Encargado B',accion: null,min:9,max:16},
-  {id:2,indicador: 'Gastos fijos', tipoIndicador: 'No estrategico', frecuencia: 'Semestral', fuente: 'Reporte administrativo', valor:null,estado:null,responsable:'Encargado E',accion: null,min:5,max:11},
-  {id:3,indicador: 'Cash flow', tipoIndicador: 'No estrategico', frecuencia: 'Semestral', fuente: 'Reporte administrativo', valor:null,estado:null,responsable:'Encargado F',accion: null,min:7,max:15},
-  
-];
 @Component({
-  selector: 'app-name2',
-  templateUrl: './name2.component.html',
-  styleUrls: ['./name2.component.sass']
+    selector: 'app-name2',
+    templateUrl: './name2.component.html',
+    styleUrls: ['./name2.component.sass']
 })
-export class Name2Component implements OnInit {
+export class Name2Component {
+    id: number;
+    valor:number;
+    numero1:number;
+    numero2:number;
+    periodo:number;
+    utilidad:number;
+    
 
-  constructor() { }
+    constructor(public dialog: MatDialog) { }
+    readonly=true;
 
-  ngOnInit() {
-  }
-  show: boolean = true;
-  displayedColumns: string[] = ['indicador', 'tipoIndicador', 'frecuencia', 'fuente','valor','estado','responsable','accion'];
-  dataSource = ELEMENT_DATA;
-  calcular(id: number, valor: number) {
-      console.log(id);
-      console.log(this.dataSource[id-1].max);
-      console.log(valor);
-      if(valor>this.dataSource[id-1].min && valor<this.dataSource[id-1].max){
-          this.dataSource[id-1].estado='mean';
-      }else if(valor<=this.dataSource[id-1].min){
-          this.dataSource[id-1].estado='negative';
-      }else if(valor>=this.dataSource[id-1].max){
-          this.dataSource[id-1].estado='positive';
-      }
+    openDialog(): void {
+        const dialogRef = this.dialog.open(DialogOverviewExampleDialog, {
+            width: '250px',
+            data: { }
+        });
+
+        dialogRef.afterClosed().subscribe(result => {
+            console.log('The dialog was closed');
+            this.valor = result;
+        });
     }
-  
+
 }
+
+@Component({
+    selector: 'dialog-overview-example-dialog',
+    templateUrl: 'dialog-overview-example-dialog.html',
+})
+export class DialogOverviewExampleDialog {
+
+    constructor(
+        public dialogRef: MatDialogRef<DialogOverviewExampleDialog>,
+        @Inject(MAT_DIALOG_DATA) public data: DialogData) {
+            
+        console.log(data);
+    }
+
+        onNoClick(): void {
+            this.dialogRef.close();
+        }
+        calculaNum(numero1,numero2){
+            /* return this.data.valor=numero1/numero2; */
+            console.log(this.data);
+            switch(this.data.id){
+                case 1:{
+                    this.data.utilidad=numero1-numero2;
+                    this.data.valor=numero1-numero2;
+                    return this.data;
+                    break;
+                }
+                case 2:{
+                    this.data.valor=numero1/numero2;
+                    return this.data;
+                    break;
+                }
+                case 3:{
+                    this.data.valor=numero1/numero2;
+                    return this.data;
+                    break;
+                }
+                case 4:{
+                    this.data.valor=this.data.utilidad/numero2;
+                    return this.data;
+                    break;
+                }
+                case 5:{
+                    this.data.valor=numero1-numero2;
+                    return this.data;
+                    break;
+                }
+                case 6:{
+                    this.data.valor=numero1;
+                    return this.data;
+                    break;
+                }
+                case 7:{
+                    this.data.valor=numero1/numero2;
+                    return this.data;
+                    break;
+                }
+                case 8:{
+                    this.data.valor=numero1;
+                    return this.data;
+                    break;
+                }
+                case 9:{
+                    this.data.valor=numero1-numero2;
+                    return this.data;
+                    break;
+                }
+                case 10:{
+                    this.data.valor=this.data.utilidad/numero2;
+                    return this.data;
+                    break;
+                }
+            }
+        }
+
+    }
