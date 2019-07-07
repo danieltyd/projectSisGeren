@@ -66,12 +66,12 @@ export class DialogOverviewExampleDialog {
                     break;
                 }
                 case 2:{
-                    this.data.valor=numero1/numero2;
+                    this.data.valor=(numero1/numero2)*100;
                     return this.data;
                     break;
                 }
                 case 3:{
-                    this.data.valor=numero1/numero2;
+                    this.data.valor=(numero1/(numero2*this.data.periodo))*100;
                     return this.data;
                     break;
                 }
@@ -91,7 +91,7 @@ export class DialogOverviewExampleDialog {
                     break;
                 }
                 case 7:{
-                    this.data.valor=numero1/numero2;
+                    this.data.valor=(numero1/numero2)*100;
                     return this.data;
                     break;
                 }
@@ -106,7 +106,7 @@ export class DialogOverviewExampleDialog {
                     break;
                 }
                 case 10:{
-                    this.data.valor=this.data.utilidad/numero2;
+                    this.data.valor=(this.data.utilidad/numero2)*100;
                     return this.data;
                     break;
                 }
