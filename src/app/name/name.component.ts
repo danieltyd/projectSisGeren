@@ -204,8 +204,8 @@ export class NameComponent implements OnInit, DoCheck {
         dialogRef.afterClosed().subscribe(result => {
           
           this.utilidad=result.utilidad;
-          this.dataSource[id - 1].accion = result.valor;
-          this.dataSource[id - 1].valor=result.valor;
+          this.dataSource[id - 1].accion = Math.round(result.valor*100)/100;
+          this.dataSource[id - 1].valor=Math.round(result.valor*100)/100;
             switch (id) {
                 case 1: {
                     //statements;
