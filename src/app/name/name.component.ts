@@ -32,7 +32,7 @@ export interface DialogData {
 }
 const ELEMENT_DATA: PeriodicElement[] = [
     { id: 1, indicador: 'Utilidad', tipoIndicador: 'Estrategico', frecuencia: 'Semestral', fuente: 'total de ingresos - total egresos', valor: 1113, estado: 'mean', responsable: 'Encargado A', accion: 1113, min: 213, max: 2013 },
-    { id: 2, indicador: 'Coste de adquisición de un cliente', tipoIndicador: 'Estrategico', frecuencia: 'Semestral', fuente: '# nuevos clientes / gastos de marketing', valor: 5.71, estado: 'positive', responsable: 'Encargado B', accion: 5.71, min: 2.85, max: 8.57 },
+    { id: 2, indicador: '% Coste de adquisición de un cliente', tipoIndicador: 'Estrategico', frecuencia: 'Semestral', fuente: '# nuevos clientes / gastos de marketing', valor: 5.71, estado: 'positive', responsable: 'Encargado B', accion: 5.71, min: 2.85, max: 8.57 },
     { id: 3, indicador: '% Competitividad de precio en el mercado', tipoIndicador: 'Estrategico', frecuencia: 'Semestral', fuente: '# de clientes demandantes del servicio / media del precio del mercado ', valor: 7.14, estado: 'positive', responsable: 'Encargado C', accion: 7.14, min: 3.57, max: 10.71 },
     { id: 4, indicador: 'Adquisición de nuevos planes de servicio', tipoIndicador: 'No estrategico', frecuencia: 'Semestral', fuente: 'utilidad / # de nuevos planes contratados', valor: 92.75, estado: 'mean', responsable: 'Encargado D', accion: 92.75, min: 35.5, max: 111.83 },
     { id: 5, indicador: 'Tiempo de mejora', tipoIndicador: 'No estrategico', frecuencia: 'Semestral', fuente: 'tiempo de respueta anterior - tiempo de respuesta optimizado', valor: 60, estado: 'positive', responsable: 'Encargado E', accion: 60, min: 20, max: 60 },
